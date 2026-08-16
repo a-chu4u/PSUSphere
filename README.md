@@ -44,7 +44,6 @@
 
 ## 📝About Authors
 
-  <td align="center">
 <table>
     <tr>
         <td align="center">
@@ -54,7 +53,7 @@
             <br>
             <b>Email: aleahnana2006@gmail.com</b>
             <br>
-            <a href="https://github.com/Kenzo-gg" target="_blank">
+            <a href="https://github.com/a-chu4u" target="_blank">
                 <img src="assets/github.png" width="60" alt="GitHub">
             </a>
         </td>
@@ -65,7 +64,7 @@
             <br>
             <b>Email: urbanoaivy@gmail.com</b>
             <br>
-            <a href="https://github.com/Mitsuozu" target="_blank">
+            <a href="https://github.com/lalaaivy" target="_blank">
                 <img src="assets/github.png" width="60" alt="GitHub">
             </a>
         </td>
