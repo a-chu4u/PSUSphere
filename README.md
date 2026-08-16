@@ -46,8 +46,8 @@
 
 <table>
     <tr>
-        <td align="center" width="40%">
-            <img src="assets\ana.jpg" width="150" height="170" alt="Ana Leah H. Baylon" style="object-fit: cover;">
+        <td align="center" width="50%">
+            <img src="assets\ana.jpg" width="150" height="150" alt="Ana Leah H. Baylon" style="object-fit: cover;">
             <br>
             <b>Ana Leah H. Baylon</b>
             <br>
@@ -57,8 +57,8 @@
                 <img src="assets/github.png" width="60" alt="GitHub">
             </a>
         </td>
-        <td align="center"width="40%">
-            <img src="assets/aivy.jpg" width="150" height="170" alt="Daven Villar" style="object-fit: cover;">
+        <td align="center"width="50%">
+            <img src="assets/aivy.jpg" width="150" height="150" alt="Daven Villar" style="object-fit: cover;">
             <br>
             <b>Princess Aivy L. Urbano</b>
             <br>
