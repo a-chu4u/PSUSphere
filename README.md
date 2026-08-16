@@ -47,7 +47,7 @@
 <table>
     <tr>
         <td align="center">
-            <img src="assets\ana.jpg" width="150" height="150" alt="Ana Leah H. Baylon" style="object-fit: cover;">
+            <img src="assets\ana.jpg" width="140" height="150" alt="Ana Leah H. Baylon" style="object-fit: cover;">
             <br>
             <b>Ana Leah H. Baylon</b>
             <br>
@@ -58,7 +58,7 @@
             </a>
         </td>
         <td align="center">
-            <img src="assets/aivy.jpg" width="150" height="150" alt="Daven Villar" style="object-fit: cover;">
+            <img src="assets/aivy.jpg" width="140" height="150" alt="Daven Villar" style="object-fit: cover;">
             <br>
             <b>Princess Aivy L. Urbano</b>
             <br>
