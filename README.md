@@ -47,25 +47,25 @@
 <table>
     <tr>
         <td align="center">
-            <img src="assets\ana.jpg" width="140" height="150" alt="Ana Leah H. Baylon" style="object-fit: cover;">
+            <img src="readme_assets\ana.jpg" width="140" height="150" alt="Ana Leah H. Baylon" style="object-fit: cover;">
             <br>
             <b>Ana Leah H. Baylon</b>
             <br>
             <b>Email: aleahnana2006@gmail.com</b>
             <br>
             <a href="https://github.com/a-chu4u" target="_blank">
-                <img src="assets/github.png" width="60" alt="GitHub">
+                <img src="readme_assets/github.png" width="60" alt="GitHub">
             </a>
         </td>
         <td align="center">
-            <img src="assets/aivy.jpg" width="140" height="150" alt="Daven Villar" style="object-fit: cover;">
+            <img src="readme_assets/aivy.jpg" width="140" height="150" alt="Daven Villar" style="object-fit: cover;">
             <br>
             <b>Princess Aivy L. Urbano</b>
             <br>
             <b>Email: urbanoaivy@gmail.com</b>
             <br>
             <a href="https://github.com/lalaaivy" target="_blank">
-                <img src="assets/github.png" width="60" alt="GitHub">
+                <img src="readme_assets/github.png" width="60" alt="GitHub">
             </a>
         </td>
     </tr>
