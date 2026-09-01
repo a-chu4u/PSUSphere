@@ -50,3 +50,8 @@ class OrganizationDeleteView(DeleteView):
     model = Organization
     template_name = "org_del.html"
     success_url = reverse_lazy("organization-list")
+
+class OrganizationMemberDeleteView(DeleteView):
+    model = OrgMember
+    template_name = "orgmem_del.html"
+    success_url = reverse_lazy("organization-member-list")
