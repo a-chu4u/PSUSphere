@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.views.generic.list import ListView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from studentorg.models import Organization, OrgMember, Student
-from studentorg.forms import OrganizationForm, OrganizationMemberForm
+from studentorg.forms import OrganizationForm, OrganizationMemberForm, StudentForm
 from django.urls import reverse_lazy
 
 class HomePageView(ListView):
@@ -40,6 +40,12 @@ class OrganizationMemberCreateView(CreateView):
     template_name = "orgmem_form.html"
     success_url = reverse_lazy("organization-member-list")
 
+class StudentCreateView(CreateView):
+    model = Student
+    form_class = StudentForm
+    template_name = "stu_form.html"
+    success_url = reverse_lazy("student-list")
+
 class OrganizationUpdateView(UpdateView):
     model = Organization
     form_class = OrganizationForm
@@ -52,6 +58,12 @@ class OrganizationMemberUpdateView(UpdateView):
     template_name = "orgmem_form.html"
     success_url = reverse_lazy("organization-member-list")
 
+class StudentUpdateView(UpdateView):
+    model = Student
+    form_class = StudentForm
+    template_name = "stu_form.html"
+    success_url = reverse_lazy("student-list")
+
 class OrganizationDeleteView(DeleteView):
     model = Organization
     template_name = "org_del.html"
@@ -61,3 +73,8 @@ class OrganizationMemberDeleteView(DeleteView):
     model = OrgMember
     template_name = "orgmem_del.html"
     success_url = reverse_lazy("organization-member-list")
+
+class StudentDeleteView(DeleteView):
+    model = Student
+    template_name = "stu_del.html"
+    success_url = reverse_lazy("student-list")
