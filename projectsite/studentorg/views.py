@@ -1,8 +1,8 @@
 from django.shortcuts import render
 from django.views.generic.list import ListView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
-from studentorg.models import Organization, OrgMember, Student, College
-from studentorg.forms import OrganizationForm, OrganizationMemberForm, StudentForm, CollegeForm
+from studentorg.models import Organization, OrgMember, Student, College, Program
+from studentorg.forms import OrganizationForm, OrganizationMemberForm, StudentForm, CollegeForm, ProgramForm
 from django.urls import reverse_lazy
 
 class HomePageView(ListView):
@@ -28,11 +28,16 @@ class StudentListView(ListView):
     template_name = "stu_list.html"
     paginate_by = 5
 
-
 class CollegeListView(ListView):
     model = College
     context_object_name = "college"
     template_name = "college_list.html"
+    paginate_by = 5
+
+class ProgramListView(ListView):
+    model = Program
+    context_object_name = "program"
+    template_name = "prog_list.html"
     paginate_by = 5
 
 class OrganizationCreateView(CreateView):
@@ -60,6 +65,13 @@ class CollegeCreateView(CreateView):
     template_name = "college_form.html"
     success_url = reverse_lazy("college-list")
 
+
+class ProgramCreateView(CreateView):
+    model = Program
+    form_class = ProgramForm
+    template_name = "prog_form.html"
+    success_url = reverse_lazy("program-list")
+
 class OrganizationUpdateView(UpdateView):
     model = Organization
     form_class = OrganizationForm
@@ -85,6 +97,13 @@ class CollegeUpdateView(UpdateView):
     template_name = "college_form.html"
     success_url = reverse_lazy("college-list")
 
+
+class ProgramUpdateView(UpdateView):
+    model = Program
+    form_class = ProgramForm
+    template_name = "prog_form.html"
+    success_url = reverse_lazy("program-list")
+
 class OrganizationDeleteView(DeleteView):
     model = Organization
     template_name = "org_del.html"
@@ -104,3 +123,8 @@ class CollegeDeleteView(DeleteView):
     model = College
     template_name = "college_del.html"
     success_url = reverse_lazy("college-list")
+
+class ProgramDeleteView(DeleteView):
+    model = Program
+    template_name = "prog_del.html"
+    success_url = reverse_lazy("program-list")
