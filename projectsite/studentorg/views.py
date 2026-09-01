@@ -1,8 +1,8 @@
 from django.shortcuts import render
 from django.views.generic.list import ListView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
-from studentorg.models import Organization, OrgMember, Student
-from studentorg.forms import OrganizationForm, OrganizationMemberForm, StudentForm
+from studentorg.models import Organization, OrgMember, Student, College
+from studentorg.forms import OrganizationForm, OrganizationMemberForm, StudentForm, CollegeForm
 from django.urls import reverse_lazy
 
 class HomePageView(ListView):
@@ -28,6 +28,13 @@ class StudentListView(ListView):
     template_name = "stu_list.html"
     paginate_by = 5
 
+
+class CollegeListView(ListView):
+    model = College
+    context_object_name = "college"
+    template_name = "college_list.html"
+    paginate_by = 5
+
 class OrganizationCreateView(CreateView):
     model = Organization
     form_class = OrganizationForm
@@ -45,6 +52,13 @@ class StudentCreateView(CreateView):
     form_class = StudentForm
     template_name = "stu_form.html"
     success_url = reverse_lazy("student-list")
+
+
+class CollegeCreateView(CreateView):
+    model = College
+    form_class = CollegeForm
+    template_name = "college_form.html"
+    success_url = reverse_lazy("college-list")
 
 class OrganizationUpdateView(UpdateView):
     model = Organization
@@ -64,6 +78,13 @@ class StudentUpdateView(UpdateView):
     template_name = "stu_form.html"
     success_url = reverse_lazy("student-list")
 
+
+class CollegeUpdateView(UpdateView):
+    model = College
+    form_class = CollegeForm
+    template_name = "college_form.html"
+    success_url = reverse_lazy("college-list")
+
 class OrganizationDeleteView(DeleteView):
     model = Organization
     template_name = "org_del.html"
@@ -78,3 +99,8 @@ class StudentDeleteView(DeleteView):
     model = Student
     template_name = "stu_del.html"
     success_url = reverse_lazy("student-list")
+
+class CollegeDeleteView(DeleteView):
+    model = College
+    template_name = "college_del.html"
+    success_url = reverse_lazy("college-list")

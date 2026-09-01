@@ -16,7 +16,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from studentorg.views import HomePageView, OrganizationList, OrganizationCreateView, OrganizationUpdateView, OrganizationDeleteView, OrganizationMemberListView, OrganizationMemberCreateView, OrganizationMemberUpdateView, OrganizationMemberDeleteView, StudentListView, StudentCreateView, StudentUpdateView, StudentDeleteView
+from studentorg.views import HomePageView, OrganizationList, OrganizationCreateView, OrganizationUpdateView, OrganizationDeleteView, OrganizationMemberListView, OrganizationMemberCreateView, OrganizationMemberUpdateView, OrganizationMemberDeleteView, StudentListView, StudentCreateView, StudentUpdateView, StudentDeleteView, CollegeListView, CollegeCreateView, CollegeUpdateView, CollegeDeleteView
 from studentorg import views
 
 urlpatterns = [
@@ -32,9 +32,14 @@ urlpatterns = [
     path("orgmem_list/<pk>", views.OrganizationMemberUpdateView.as_view(), name="organization-member-update"),
     path("orgmem_list/<pk>/delete", views.OrganizationMemberDeleteView.as_view(), name="organization-member-delete"),
 
-    path("stu_list", views.StudentListView.as_view(), name="student-list"),
+    path("student_list", views.StudentListView.as_view(), name="student-list"),
     path("student_list/add", views.StudentCreateView.as_view(), name="student-add"),
     path("student_list/<pk>", views.StudentUpdateView.as_view(), name="student-update"),
-    path("student_list/<pk>/delete", views.StudentDeleteView.as_view(), name="student-delete")
+    path("student_list/<pk>/delete", views.StudentDeleteView.as_view(), name="student-delete"),
+
+    path("college_list", views.CollegeListView.as_view(), name="college-list"),
+    path("college_list/add", views.CollegeCreateView.as_view(), name="college-add"),
+    path("college_list/<pk>", views.CollegeUpdateView.as_view(), name="college-update"),
+    path("college_list/<pk>/delete", views.CollegeDeleteView.as_view(), name="college-delete"),
 ]
 
