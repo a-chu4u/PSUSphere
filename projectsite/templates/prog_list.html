@@ -8,7 +8,7 @@
                 <div class="card">
                     <div class="card-header">
                         <div class="card-title">
-                            List of Colleges
+                            List of Programs
                         </div>
 
                         <div class="card-category">
@@ -21,25 +21,24 @@
                         <div class="col-md-12 row">
 
                             <div class="col-md-6">
-                                <form
-                                    class="navbar-left navbar-form nav-search mr-md-3"
-                                    action=""
-                                >
-                                    <div class="input-group">
+                               <form class="navbar-left navbar-form nav-search mr-md-3"
+                                    action="{% url 'program-list' %}"
+                                    method="get">
 
-                                        <input
-                                            type="text"
+                                    <div class="input-group">
+                                        <input type="text"
                                             placeholder="Search ..."
                                             class="form-control"
-                                        />
+                                            name="q"
+                                            value="{{ request.GET.q }}">
 
                                         <div class="input-group-append">
                                             <span class="input-group-text">
                                                 <i class="la la-search search-icon"></i>
                                             </span>
                                         </div>
-
                                     </div>
+
                                 </form>
                             </div>
 
@@ -53,6 +52,34 @@
 
                         </div>
 
+                        <div class="col-md-12">
+                            <form method="get" class="row g-2 align-items-center">
+                                <div class="col-auto">
+                                    <label for="smallSelect" class="col-form-label">Sort by</label>
+                                </div>
+
+                                <div class="col-auto">
+                                    <select class="form-control form-control-sm" id="smallSelect" name="sort_by">     
+                                        <option value="prog_name"
+                                                {% if request.GET.sort_by == "prog_name" %}selected{% endif %}>
+                                            Program Name
+                                        </option>
+
+                                        <option value="college__college_name"
+                                                {% if request.GET.sort_by == "college__college_name" %}selected{% endif %}>
+                                            College
+                                        </option>
+
+                                    </select>
+                                </div>
+
+                                <div class="col-auto">
+                                    <button type="submit" class="btn btn-primary btn-sm btn-rounded">
+                                        Sort
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
                        
                         <table class="table table-striped mt-3">
 

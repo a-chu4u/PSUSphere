@@ -21,25 +21,24 @@
                         <div class="col-md-12 row">
 
                             <div class="col-md-6">
-                                <form
-                                    class="navbar-left navbar-form nav-search mr-md-3"
-                                    action=""
-                                >
-                                    <div class="input-group">
+                                 <form class="navbar-left navbar-form nav-search mr-md-3"
+                                    action="{% url 'college-list' %}"
+                                    method="get">
 
-                                        <input
-                                            type="text"
+                                    <div class="input-group">
+                                        <input type="text"
                                             placeholder="Search ..."
                                             class="form-control"
-                                        />
+                                            name="q"
+                                            value="{{ request.GET.q }}">
 
                                         <div class="input-group-append">
                                             <span class="input-group-text">
                                                 <i class="la la-search search-icon"></i>
                                             </span>
                                         </div>
-
                                     </div>
+
                                 </form>
                             </div>
 
@@ -51,6 +50,38 @@
                                 </div>
                             </div>
 
+                        </div>
+                        <div class="col-md-12">
+                            <form method="get" class="row g-2 align-items-center">
+                                <div class="col-auto">
+                                    <label for="smallSelect" class="col-form-label">Sort by</label>
+                                </div>
+
+                                <div class="col-auto">
+                                    <select class="form-control form-control-sm" id="smallSelect" name="sort_by">
+                                        <option value="college_name"
+                                            {% if request.GET.sort_by == "college_name" %}selected{% endif %}>
+                                            College Name
+                                        </option>
+
+                                        <option value="created_at"
+                                            {% if request.GET.sort_by == "created_at" %}selected{% endif %}>
+                                            Created At
+                                        </option>
+
+                                        <option value="updated_at"
+                                            {% if request.GET.sort_by == "updated_at" %}selected{% endif %}>
+                                            Updated At
+                                        </option>
+                                    </select>
+                                </div>
+
+                                <div class="col-auto">
+                                    <button type="submit" class="btn btn-primary btn-sm btn-rounded">
+                                        Sort
+                                    </button>
+                                </div>
+                            </form>
                         </div>
 
                        
