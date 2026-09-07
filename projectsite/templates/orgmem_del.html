@@ -16,7 +16,9 @@
                     <div class="col-md-6">
                         <div class="card-body">
                             <form class="" action="" method="post" novalidate>
-                                <p>Are you sure you want to delete "{{ object }}"?</p>
+                                <p>
+                                    Are you sure you want to delete "{{ object.student }}" ?
+                                </p>
 
                                 {% csrf_token %}
                                 {% include 'includes/form.html' %}

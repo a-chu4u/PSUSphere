@@ -12,7 +12,7 @@
                         </div>
 
                         <div class="card-category">
-                            Page Subtitle
+                            View and manage college information.
                         </div>
                     </div>
 
@@ -22,16 +22,12 @@
 
                             <div class="col-md-6">
                                 <form
-                                    class="navbar-left navbar-form nav-search mr-md-3"
-                                    action=""
-                                >
+                                    class="navbar-left navbar-form nav-search mr-md-3" action="{% url "college-list" %}">
                                     <div class="input-group">
 
                                         <input
                                             type="text"
-                                            placeholder="Search ..."
-                                            class="form-control"
-                                        />
+                                            placeholder="Search ..." class="form-control" name="q"/>
 
                                         <div class="input-group-append">
                                             <span class="input-group-text">
